@@ -1,0 +1,186 @@
+:root {
+  --main: #AF42AF;
+  --accent: #212144;
+  --bg: #f7f6fa;
+  --white: #fff;
+  --grey: #eee;
+  --text: #222;
+  --cta: #AF42AF;
+  --cta-hover: #8b328b;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey);
+  padding: 1.2rem 0;
+}
+
+.logo {
+  color: var(--main);
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin: 0;
+  display: inline-block;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a.cta-nav {
+  color: var(--main);
+  font-weight: bold;
+}
+nav a:hover {
+  color: var(--main);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(90deg, var(--main) 40%, #e9d7f0 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 4rem 0 3rem 0;
+}
+.hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.cta-btn {
+  background: var(--cta);
+  color: var(--white);
+  border: none;
+  border-radius: 28px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+  display: inline-block;
+  margin-top: 1rem;
+  box-shadow: 0 2px 10px #0002;
+}
+.cta-btn:hover {
+  background: var(--cta-hover);
+}
+.cta-btn.big {
+  font-size: 1.2rem;
+  padding: 1.1rem 2.7rem;
+}
+
+/* ABOUT */
+.about {
+  background: var(--white);
+  padding: 3rem 0;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px #0001;
+}
+.about h3 {
+  color: var(--main);
+  margin-bottom: 1rem;
+}
+
+/* PROBLEM & BENEFIT */
+.problem-benefit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.problem, .benefit {
+  flex: 1 1 300px;
+  background: var(--white);
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px #0001;
+}
+
+.problem h4, .benefit h4 {
+  color: var(--main);
+  margin-top: 0;
+}
+
+.benefit ul {
+  margin-top: 1rem;
+  padding-left: 1.1rem;
+}
+
+/* CONTACT */
+.contact {
+  background: var(--main);
+  color: var(--white);
+  padding: 3rem 0 2.3rem 0;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+.contact h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--accent);
+  color: var(--white);
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.96rem;
+  margin-top: 2rem;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .problem-benefit {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  nav {
+    float: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8rem;
+    gap: 1.3rem;
+  }
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
